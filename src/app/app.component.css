@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template:
+    "title title table chart" minmax(auto, 40px)
+    "title title table chart" minmax(auto, 100px)
+    "menu menu main main" minmax(auto, 40px)
+    "menu menu main main" 1fr
+    / minmax(140px, 1fr) minmax(140px, 1fr) 2fr 3fr;
+  gap: 3px;
+  height: auto;
+  width: auto;
+  font-family: "HackGen Console NF Regular";
+  padding: 2%;
+}
+
+.title {
+  grid-area: title;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table {
+  grid-area: table;
+  border: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.chart {
+  grid-area: chart;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  grid-area: menu;
+  border: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.main {
+  grid-area: main;
+  border: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
