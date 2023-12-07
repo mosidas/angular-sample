@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, NgModule, Inject } from '@angular/core';
+import { Component, Input, OnInit, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Chart, ChartConfiguration, ChartData, ChartType } from 'chart.js';
+import { ChartConfiguration, ChartData, ChartType } from 'chart.js';
 import { ChartModel } from './chart-model';
 import { NgChartsModule } from 'ng2-charts';
 
@@ -117,7 +117,14 @@ export class ChartComponent implements OnInit {
   };
 
   public barChartType: ChartType = 'bar';
-  public barChartData: any;
+  public barChartData: ChartData<'bar'> = {
+    labels: this.data[0].labels,
+    datasets: this.data.map((item, index) => ({
+      label: 'label' + index,
+      data: item.data,
+      backgroundColor: item.color,
+    })),
+  };
 
   ngOnInit(): void {
     const arbitraryStackKey = 'stack1';
