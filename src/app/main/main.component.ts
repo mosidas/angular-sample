@@ -5,8 +5,14 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  styleUrl: './main.component.css',
 })
 export class MainComponent {
+  count = 0;
+  clickMessage = this.count + ' clicks!';
 
+  onClick(event: any) {
+    console.log(event);
+    this.clickMessage = this.count++ + ' clicks!';
+  }
 }

@@ -89,7 +89,7 @@ export class ChartComponent implements OnInit {
           padding: 1,
           boxWidth: 10,
           font: {
-            size: 15,
+            size: 35,
             family: 'Arial',
           },
           borderRadius: 10,
@@ -99,7 +99,7 @@ export class ChartComponent implements OnInit {
         display: true,
         text: 'Chart.js Bar Chart',
         font: {
-          size: 5,
+          size: 25,
           family: 'Arial',
         },
       },

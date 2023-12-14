@@ -15,8 +15,8 @@ body {
   position: relative;
   display: grid;
   grid-template:
-    "title title table chart" minmax(auto, 40px)
-    "title title table chart" minmax(auto, 100px)
+    "title title table chart" minmax(auto, 200px)
+    "title title table chart" minmax(auto, 200px)
     "menu menu main main" minmax(auto, 40px)
     "menu menu main main" 1fr
     / minmax(140px, 1fr) minmax(140px, 1fr) 2fr 3fr;
