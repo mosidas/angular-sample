@@ -1,0 +1,12 @@
+# docker compose -f compose-ja.yaml up --build -d
+
+services:
+  angular-app-ja:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=production-ja
+    ports:
+      - 0.0.0.0:8880:80
+    command: nginx -g 'daemon off;'

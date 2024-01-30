@@ -30,7 +30,13 @@
             "scripts": []
           },
           "configurations": {
-            "production": {
+            "production-ja": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.lang.ts",
+                  "with": "src/environments/environment.lang.ja.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -45,7 +51,45 @@
               ],
               "outputHashing": "all"
             },
-            "development": {
+            "production-en": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.lang.ts",
+                  "with": "src/environments/environment.lang.en.ts"
+                }
+              ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development-ja": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.lang.ts",
+                  "with": "src/environments/environment.lang.ja.ts"
+                }
+              ],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "development-en": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.lang.ts",
+                  "with": "src/environments/environment.lang.en.ts"
+                }
+              ],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
@@ -56,11 +100,17 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "ang-test4:build:production"
+            "production-ja": {
+              "buildTarget": "ang-test4:build:production-ja"
             },
-            "development": {
-              "buildTarget": "ang-test4:build:development"
+            "production-en": {
+              "buildTarget": "ang-test4:build:production-en"
+            },
+            "development-ja": {
+              "buildTarget": "ang-test4:build:development-ja"
+            },
+            "development-en": {
+              "buildTarget": "ang-test4:build:development-en"
             }
           },
           "defaultConfiguration": "development"

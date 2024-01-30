@@ -1,1 +1,8 @@
-<p>{{ "hello" | translate }} {{ "welcome" | translate }}</p>
+<p
+  [ngClass]="{
+    'text-blue': currentLang === 'ja',
+    'text-red': currentLang === 'en'
+  }"
+>
+  {{ "hello" | translate }} {{ "welcome" | translate }}
+</p>
